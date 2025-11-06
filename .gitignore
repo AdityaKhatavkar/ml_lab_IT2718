@@ -1,0 +1,66 @@
+# ------------------------------
+# Python and Virtual Environment
+# ------------------------------
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.so
+*.egg
+*.egg-info/
+dist/
+build/
+.eggs/
+myenv/
+env/
+venv/
+
+# ------------------------------
+# Jupyter Notebook
+# ------------------------------
+.ipynb_checkpoints/
+
+# ------------------------------
+# VS Code and IDE settings
+# ------------------------------
+.vscode/
+.idea/
+
+# ------------------------------
+# OS / System files
+# ------------------------------
+.DS_Store
+Thumbs.db
+
+# ------------------------------
+# Logs and cache
+# ------------------------------
+*.log
+*.tmp
+*.cache
+*.bak
+
+# ------------------------------
+# Machine Learning Artifacts
+# ------------------------------
+*.pkl
+*.joblib
+*.h5
+*.ckpt
+*.model
+*.weights
+*.dat
+
+# ------------------------------
+# Flask / Web App
+# ------------------------------
+instance/
+*.db
+*.sqlite
+*.sqlite3
+
+# ------------------------------
+# Environment / Config files
+# ------------------------------
+.env
+.env.*
