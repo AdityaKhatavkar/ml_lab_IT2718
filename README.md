@@ -1,6 +1,5 @@
-text = """Name : Aditya Amar Khatavkar
-PRN  : 22141203
-Course code : IT2718
-Course : Elective-III Lab: Machine Learning Lab
-Program : Final Year (Sem - VII) [B.Tech IT]"""
-print(text)
+Name : Aditya Amar Khatavkar<br>
+PRN  : 22141203<br>
+Course code : IT2718<br>
+Course : Elective-III Lab: Machine Learning Lab<br>
+Program : Final Year (Sem - VII) [B.Tech IT]
