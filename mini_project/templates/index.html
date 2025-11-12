@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Semantic Analysis</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        @keyframes backgroundAnimation {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        @keyframes glow {
+            0% { box-shadow: 0 0 10px rgba(255, 255, 255, 0.2); }
+            50% { box-shadow: 0 0 20px rgba(255, 255, 255, 0.6); }
+            100% { box-shadow: 0 0 10px rgba(255, 255, 255, 0.2); }
+        }
+
+        .glow-effect {
+            animation: glow 2s infinite ease-in-out;
+        }
+
+        .emoji {
+            font-size: 3rem; /* Adjusted font size for emojis */
+            animation: bounce 2s infinite;
+        }
+
+        @keyframes bounce {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://media.istockphoto.com/id/871656372/photo/tuscany-maremma-grosseto-castiglione-della-pescaia.jpg?s=612x612&w=0&k=20&c=Q5komvUE1LWR8NiGptOaWmMNFGYJwy5PNpfcEggHsV4=');
+            background-size: cover;
+            background-position: center;
+            animation: backgroundAnimation 20s ease infinite;
+            font-family: 'Arial', sans-serif;
+            color: #e0e0e0; /* Softer font color */
+        }
+
+        h1, h3 {
+            color: #e0e0e0; /* Softer font color for headers */
+        }
+
+        input, button {
+            font-size: 1rem; /* Smaller font size for inputs and buttons */
+        }
+
+        .positive {
+            color: #0c5b0f; /* Green for positive */
+        }
+
+        .negative {
+            color: #b10404; /* Red for negative */
+        }
+
+        .default {
+            color: #FFC107; /* Amber for default */
+        }
+    </style>
+</head>
+<body>
+    <div class="container" style="width: 100%; height: 100vh; display: flex; flex-direction: column; justify-content: center; align-items: center;">
+        <div class="container-lg glow-effect" style="padding: 1.5rem; background-color: rgba(255, 255, 255, 0.1); border-radius: 10px;">
+            <h1 style="font-weight: bold; font-size: 2.5rem; color:rgb(21, 21, 21)">Review Analysis</h1>
+            <form action="/" method="post">
+                <input type="text" name="text" style="border: 2px solid #ccc; border-radius: 10px; width: 50vh; height: 5vh; padding-left: 10px;" placeholder="Enter Your Review">
+                <button style="background-color: brown; color: white; border: 2px; border-radius: 25px; width: 10vh; height: 5vh;">Submit</button> 
+            </form>
+        </div>
+        <br>
+        <h3 style="font-size: 1.5rem; color:rgb(21, 21, 21)">Input: "{{ review }}"</h3>
+        <br>
+        <h1 class="{{ 'positive' if isPositive else 'negative' if isPositive is defined else 'default' }}" style="font-size: 2rem;">
+            Your review is: {{ prediction }}
+        </h1>
+        <div class="emoji">
+            {% if isPositive %}
+                <span style="color: #4CAF50;">😊</span> <!-- Happy face for positive review -->
+            {% elif isPositive is not none %}
+                <span style="color: #F44336;">😞</span> <!-- Sad face for negative review -->
+            {% else %}
+                <span style="color: #FFC107;">🙂</span> <!-- Neutral face for default -->
+            {% endif %}
+        </div>
+        <br>
+    </div>
+</body>
+</html>

@@ -1,48 +1,21 @@
-# ------------------------------
-# Python and Virtual Environment
-# ------------------------------
+# Python / Virtual Environment
 __pycache__/
 *.py[cod]
-*.pyo
-*.pyd
-*.so
-*.egg
-*.egg-info/
-dist/
-build/
-.eggs/
 myenv/
 env/
 venv/
 
-# ------------------------------
-# Jupyter Notebook
-# ------------------------------
-.ipynb_checkpoints/
-
-# ------------------------------
-# VS Code and IDE settings
-# ------------------------------
-.vscode/
-.idea/
-
-# ------------------------------
-# OS / System files
-# ------------------------------
-.DS_Store
-Thumbs.db
-
-# ------------------------------
-# Logs and cache
-# ------------------------------
+# Logs, cache, temp
 *.log
 *.tmp
 *.cache
 *.bak
 
-# ------------------------------
-# Machine Learning Artifacts
-# ------------------------------
+# IDE
+.vscode/
+.idea/
+
+# ML artifacts
 *.pkl
 *.joblib
 *.h5
@@ -51,16 +24,11 @@ Thumbs.db
 *.weights
 *.dat
 
-# ------------------------------
 # Flask / Web App
-# ------------------------------
-instance/
-*.db
-*.sqlite
-*.sqlite3
+# Ignore everything in instance except database files
+instance/*
+!instance/*.db
 
-# ------------------------------
-# Environment / Config files
-# ------------------------------
-.env
-.env.*
+# NLTK data
+# Keep your downloaded NLTK corpora
+!mini_project/nltk_data/
