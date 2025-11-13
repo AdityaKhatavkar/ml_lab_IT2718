@@ -1,21 +1,41 @@
+# ------------------------------
 # Python / Virtual Environment
+# ------------------------------
 __pycache__/
 *.py[cod]
+*.pyo
+*.pyd
+*.so
+*.egg
+*.egg-info/
+dist/
+build/
+.eggs/
 myenv/
 env/
 venv/
 
-# Logs, cache, temp
+# ------------------------------
+# Logs, Cache, and Temp Files
+# ------------------------------
 *.log
 *.tmp
 *.cache
 *.bak
+*.swp
+*.DS_Store
+*.out
 
-# IDE
+# ------------------------------
+# IDE / Editor Settings
+# ------------------------------
 .vscode/
 .idea/
+*.iml
 
-# ML artifacts
+# ------------------------------
+# Machine Learning Artifacts
+# ------------------------------
 *.pkl
 *.joblib
 *.h5
@@ -23,17 +43,56 @@ venv/
 *.model
 *.weights
 *.dat
+*.npy
+*.npz
 
+# ------------------------------
 # Flask / Web App
-# Ignore everything in instance except database files
+# ------------------------------
+# Ignore everything in instance except DB files
 instance/*
 !instance/*.db
 
-# NLTK data
-# Keep your downloaded NLTK corpora
+# Ignore compiled templates, uploaded files, and session data if any
+uploads/
+__temp__/
+temp/
+sessions/
+
+# ------------------------------
+# Datasets and Large Files
+# ------------------------------
+*.csv
+*.tsv
+*.json
+*.xlsx
+*.xls
+*.ods
+*.zip
+*.tar
+*.gz
+*.rar
+
+# ------------------------------
+# Images and Media
+# ------------------------------
+*.jpg
+*.jpeg
+*.png
+*.gif
+*.bmp
+*.svg
+*.webp
+
+# ------------------------------
+# NLTK / Language Data
+# ------------------------------
+# Keep only your downloaded NLTK corpora folder (if used locally)
+nltk_data/
 !mini_project/nltk_data/
 
-
-.csv
-
-.jpg
+# ------------------------------
+# Jupyter / Notebooks
+# ------------------------------
+.ipynb_checkpoints/
+*.ipynb
