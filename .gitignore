@@ -94,5 +94,4 @@ nltk_data/
 # ------------------------------
 # Jupyter / Notebooks
 # ------------------------------
-.ipynb_checkpoints/
-*.ipynb
+
