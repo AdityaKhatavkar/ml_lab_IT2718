@@ -32,3 +32,8 @@ instance/*
 # NLTK data
 # Keep your downloaded NLTK corpora
 !mini_project/nltk_data/
+
+
+.csv
+
+.jpg
